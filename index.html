@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#203e35"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="El Carç"><title>El Carç · Reorganització</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202d29;background:#f6f7f2;font-size:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;padding:0 0 calc(100px + env(safe-area-inset-bottom))}
+header{background:#203e35;color:#f9fcf6;padding:22px max(18px,env(safe-area-inset-left)) 18px;position:relative}
+main{max-width:760px;margin:auto;padding:18px 14px}h1{font-size:1.65rem;letter-spacing:-.035em;margin:0 0 5px}
+h2{font-size:1.19rem;margin:0 0 11px;letter-spacing:-.02em}h3{font-size:1rem;margin:0 0 8px}
+p{margin:8px 0;line-height:1.48}.small{font-size:.84rem;color:#53635d}.headsub{font-size:.9rem;opacity:.82;margin:4px 0}
+.card{background:#fff;border:1px solid #e0e8df;border-radius:18px;padding:18px;margin:0 0 16px;box-shadow:0 2px 10px #1c30210a}
+.intro{border-left:4px solid #6f9879;padding:10px 12px;background:#edf3e9;border-radius:8px;font-size:.91rem;line-height:1.4;margin:12px 0 0}
+label{font-size:.94rem}button,.action,select{min-height:45px;font:inherit;border-radius:10px}
+button{border:1px solid #cbd9ce;background:white;color:#203e35;padding:10px 13px;font-weight:650;cursor:pointer}
+button:active{transform:scale(.98)}button.primary{background:#203e35;color:white;border-color:#203e35}
+textarea{width:100%;resize:vertical;min-height:95px;padding:13px;border-radius:12px;border:1.5px solid #ccd8d0;background:#fbfcf9;font:inherit;line-height:1.45;color:#203e35}
+textarea:focus,select:focus{outline:3px solid #b9d9bb;border-color:#377450}
+textarea::placeholder{color:#7f8e85}select{max-width:170px;width:100%;padding:5px 8px;border:1px solid #ccd8d0;color:#243c31;background:#f8faf6;font-size:.89rem}
+.stack{display:grid;gap:14px}.check{display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-top:1px solid #e9eee8}
+.check:first-of-type{border-top:0}.check input{height:24px;width:24px;accent-color:#347153;flex:0 0 24px;margin:0}.check span{line-height:1.35}
+.item{border-top:1px solid #e4eae3;padding:14px 0}.item:last-child{padding-bottom:0}
+.itemtop{display:flex;justify-content:space-between;gap:8px;align-items:center}.itemhead{flex:1;min-width:0}.num{color:#527a60;font-size:.78rem;letter-spacing:.04em;font-weight:750}
+.itemhead strong{display:block;font-size:.98rem;margin:2px 0}
+.prompt{color:#58685e;font-size:.9rem;margin:8px 0 10px;line-height:1.38}
+.item textarea{min-height:64px;font-size:.92rem}
+.fieldlabel{display:block;margin-bottom:7px;font-weight:700;color:#2e4336}
+#saveLabel{font-size:.8rem;color:#bedbc5}.actions{display:flex;flex-wrap:wrap;gap:9px}
+nav{display:flex;gap:4px;justify-content:space-around;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #dce7dc;padding:9px 8px calc(9px + env(safe-area-inset-bottom));z-index:4;box-shadow:0 -6px 16px #10291c10}
+nav a{font-size:.78rem;font-weight:750;text-align:center;color:#2e6047;text-decoration:none;padding:10px 9px;border-radius:9px}
+nav a:focus{background:#eaf3e9} .muted{color:#647469}.reminder{background:#fff8df;padding:13px;border-radius:12px;font-size:.88rem;color:#5e5029;margin-top:11px}
+summary{cursor:pointer;font-weight:650;list-style-position:outside}.toolbar{position:sticky;top:0;background:#f6f7f2;padding:7px 0 0;z-index:2}
+#progress{font-size:.81rem;color:#52675b;padding-bottom:8px}
+a.anchor{color:#366f4c}.visuallyhidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(min-width:660px){main{padding:24px}.card{padding:24px}h1{font-size:2rem}nav{left:50%;transform:translateX(-50%);max-width:760px;border-radius:16px 16px 0 0}}
+</style>
+</head>
+<body>
+<header><div style="max-width:720px;margin:auto"><div style="font-size:.8rem;opacity:.8;letter-spacing:.1em">REUNIÓ · 15 OCTUBRE 2026</div>
+<h1>El Carç · Reorganització</h1>
+<div class="headsub">Guió privat de sondeig i notes</div><div id="saveLabel" role="status">Preparat per prendre notes</div>
+<div class="intro" style="color:#ecf4eb;background:#335647;border-left-color:#b7d1a1">Escoltar primer. Acordar el mínim per començar. Proposar la diagnosi de governança dels tres com a primer treball remunerat.</div>
+</div></header>
+<main>
+<section class="card" id="sortida"><h2>Abans de sortir de la reunió</h2>
+<p class="small">Marca només allò que hagi quedat clar. Les caselles són per a ús personal, no substitueixen un acord real.</p>
+<div id="minimum"></div></section>
+<section class="card" id="notes"><h2>Notes de reunió</h2>
+<div class="stack">
+<div><label class="fieldlabel" for="rapid">Apunts ràpids</label><textarea id="rapid" data-field="rapid" rows="6" placeholder="Anota el que diuen, idees, frases, reaccions..."></textarea></div>
+<div><label class="fieldlabel" for="agreements">Acords explícits</label><textarea id="agreements" data-field="agreements" rows="3" placeholder="Què s'ha acceptat? Qui hi era? Amb quines condicions?"></textarea></div>
+<div><label class="fieldlabel" for="pending">Pendents i properes passes</label><textarea id="pending" data-field="pending" rows="3" placeholder="Què queda per decidir? Qui ha de respondre?"></textarea></div>
+<div><label class="fieldlabel" for="impressions">Impressions personals (no són acords)</label><textarea id="impressions" data-field="impressions" rows="3" placeholder="Resistències, grau d'interès, què et genera dubtes..."></textarea></div>
+</div></section>
+<section class="card" id="sondeig"><h2>Els 7 punts + 1 · sondeig</h2>
+<p class="small">No els presentis com una llista de condicions. Utilitza'ls per observar, orientar i prendre notes. «Acordat» només si hi ha acceptació explícita.</p>
+<div id="topics"></div></section>
+<section class="card" id="copia"><h2>Desar i recuperar</h2><p>Es desa automàticament <strong>en aquest navegador i aquest dispositiu</strong>, no a GitHub ni al servidor. Per seguretat, exporta les notes en acabar.</p>
+<div class="actions"><button class="primary" id="copy">Copiar resum</button><button id="download">Baixar notes (.txt)</button><button id="export">Còpia de seguretat (.json)</button></div>
+<div style="margin-top:14px"><label class="fieldlabel" for="import">Recuperar còpia JSON</label><input id="import" type="file" accept="application/json,.json" style="max-width:100%"></div>
+<p id="message" class="small" role="status"></p>
+<div class="reminder"><strong>Important:</strong> no facis servir el mode privat del navegador, no esborris dades del lloc i no canviïs d'adreça web durant la reunió sense exportar abans la còpia.</div>
+</section>
+</main>
+<nav aria-label="Navegació ràpida"><a href="#sortida">Mínims</a><a href="#notes">Notes</a><a href="#sondeig">7 + 1</a><a href="#copia">Exportar</a></nav>
+<script>
+(function(){
+"use strict";
+var KEY="elcarc_reorganitzacio_20261015_v1";
+var minimum=[
+"1.400 €/mes + IVA com a proposta econòmica",
+"Inici efectiu i primera factura",
+"Dedicació orientativa: quatre dies/mes, no bossa d'hores",
+"Rol estratègic acotat i encàrrecs extraordinaris separats"
+];
+var topics=[
+["Decisions i consens","Com prenen avui les decisions els tres? Què necessita acord conjunt? No confondre proposta de consens amb regla ja aprovada."],
+["Interlocució","Treballar amb Marta, Xavi o Albert segons el front, sense imposar un únic interlocutor."],
+["Rol i autonomia","Consultoria estratègica, preparació de decisions, coordinació selectiva i representació; no gerència integral."],
+["Dedicació i contracte","Quatre dies mensuals orientatius; valorar durada, revisió, preavís i facturació sense obrir debats innecessaris."],
+["Priorització","Qui proposa fronts? Com es validen? Evitar convertir cada conversa individual en un encàrrec."],
+["Encàrrecs extraordinaris","Quan una actuació requereix pressupost propi? Reprioritzar si la càrrega supera la capacitat."],
+["Marc estratègic","Fase 1 com a punt de partida; la fotovoltaica i els esdeveniments poden quedar fora de la gestió directa, però generen dependències."],
+["+1 · Governança dels tres","Primera prioritat remunerada: primer comprendre com decideixen avui; després diagnosticar i proposar millores. La teva governança professional, en segon terme."]
+];
+var state={minimum:{},statuses:{},topicNotes:{},rapid:"",agreements:"",pending:"",impressions:""};
+var msg=document.getElementById("message"), save=document.getElementById("saveLabel");
+function safeText(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+try{var old=JSON.parse(localStorage.getItem(KEY)||"null");if(old&&typeof old==="object"){state.minimum=old.minimum||{};state.statuses=old.statuses||{};state.topicNotes=old.topicNotes||{};["rapid","agreements","pending","impressions"].forEach(function(k){state[k]=typeof old[k]==="string"?old[k]:"";});}}catch(e){save.textContent="Atenció: el desament local no està disponible; exporta notes sovint.";}
+var minHolder=document.getElementById("minimum");
+minimum.forEach(function(label,i){var wrap=document.createElement("label");wrap.className="check";var input=document.createElement("input");input.type="checkbox";input.checked=!!state.minimum[i];input.addEventListener("change",function(){state.minimum[i]=input.checked;persist();});var span=document.createElement("span");span.textContent=label;wrap.appendChild(input);wrap.appendChild(span);minHolder.appendChild(wrap);});
+var holder=document.getElementById("topics");
+topics.forEach(function(t,i){
+var item=document.createElement("div");item.className="item";
+var top=document.createElement("div");top.className="itemtop";
+var head=document.createElement("div");head.className="itemhead";
+var num=document.createElement("div");num.className="num";num.textContent=i===7?"PRIMER ENCÀRREC":"PUNT "+(i+1);
+var strong=document.createElement("strong");strong.textContent=t[0];head.appendChild(num);head.appendChild(strong);
+var sel=document.createElement("select");sel.setAttribute("aria-label","Estat de "+t[0]);["No tractat","Sondejat","Acordat","Amb reserves"].forEach(function(v){var op=document.createElement("option");op.value=v;op.textContent=v;sel.appendChild(op);});
+sel.value=state.statuses[i]||"No tractat";sel.addEventListener("change",function(){state.statuses[i]=sel.value;persist();});
+top.appendChild(head);top.appendChild(sel);item.appendChild(top);
+var prompt=document.createElement("p");prompt.className="prompt";prompt.textContent=t[1];item.appendChild(prompt);
+var input=document.createElement("textarea");input.rows=2;input.placeholder="Notes d'aquest punt...";input.setAttribute("aria-label","Notes de "+t[0]);input.value=state.topicNotes[i]||"";input.addEventListener("input",function(){state.topicNotes[i]=input.value;persist();});item.appendChild(input);holder.appendChild(item);
+});
+document.querySelectorAll("[data-field]").forEach(function(el){var k=el.getAttribute("data-field");el.value=state[k];el.addEventListener("input",function(){state[k]=el.value;persist();});});
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));save.textContent="Desat en aquest mòbil · "+new Date().toLocaleTimeString("ca-ES",{hour:"2-digit",minute:"2-digit"});}catch(e){save.textContent="No s'ha pogut desar: exporta ara les notes.";}}
+function summary(){
+var out=["EL CARÇ · REORGANITZACIÓ","Reunió: 15 d'octubre de 2026",""];
+out.push("MÍNIMS");
+minimum.forEach(function(x,i){out.push((state.minimum[i]?"[x] ":"[ ] ")+x);});
+out.push("","NOTES RÀPIDES",state.rapid||"—","", "ACORDS EXPLÍCITS",state.agreements||"—","","PENDENTS",state.pending||"—","","IMPRESSIONS PERSONALS (NO ACORDS)",state.impressions||"—","","SONDEIG DELS 7 PUNTS + 1");
+topics.forEach(function(t,i){out.push("",""+(i+1)+". "+t[0]+" — "+(state.statuses[i]||"No tractat"),state.topicNotes[i]||"—");});
+out.push("","Registre privat d'una reunió. Les anotacions no són per si soles una acta ni compromisos aprovats.");return out.join("\n");
+}
+function download(text,name,type){var b=new Blob([text],{type:type}),url=URL.createObjectURL(b),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},3000);}
+function notify(text){msg.textContent=text;}
+document.getElementById("download").addEventListener("click",function(){download(summary(),"El_Carc_reorganitzacio_notes_2026-10-15.txt","text/plain;charset=utf-8");notify("Fitxer de notes preparat per descarregar.");});
+document.getElementById("export").addEventListener("click",function(){download(JSON.stringify({app:"El Carç · Reorganització",version:1,data:state},null,2),"El_Carc_copia_notes_2026-10-15.json","application/json");notify("Còpia JSON preparada. Conserva-la en un lloc segur.");});
+document.getElementById("copy").addEventListener("click",function(){var s=summary();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){notify("Resum copiat al porta-retalls.");},function(){notify("No s'ha pogut copiar. Prova de baixar el TXT.");});}else{notify("Còpia no disponible: fes servir Baixar notes.");}});
+document.getElementById("import").addEventListener("change",function(e){var f=e.target.files&&e.target.files[0];if(!f)return;var reader=new FileReader();reader.onload=function(){try{var d=JSON.parse(reader.result);if(!d||d.version!==1||typeof d.data!=="object")throw Error("Format no vàlid");if(!confirm("Vols substituir les notes d'aquest navegador per les de la còpia?"))return;localStorage.setItem(KEY,JSON.stringify(d.data));location.reload();}catch(error){notify("No s'ha pogut importar la còpia: "+error.message);}};reader.readAsText(f);});
+persist();
+})();
+</script>
+</body>
+</html>
